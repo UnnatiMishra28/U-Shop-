@@ -1,0 +1,296 @@
+<!DOCTYPE html>>
+<htm>
+    <head>
+    <title>..</title>
+   <link rel="stylesheet" href="styles.css">
+   <style>
+    .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type=tel] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type=email] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #088;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+   </style>
+    </head>
+    
+        <!-- HEADER -->
+    <section id="header">
+        <h3 style="color:rgb(9, 127, 148);">U-shop</h3>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="lp.html">login</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile"></div>
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <br><br>
+    <br>
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="shipping.php" method="post">
+      
+              <div class="row">
+                <div class="col-50">
+                    <h3><u>Billing Address</u></h3><br><br>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Unnati Mishra">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" placeholder="Unn@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Ghaziabad">
+
+            <div class="row">
+                <div class="col-50">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="UP">
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">Zip</label>
+                    <input type="text" id="zip" name="zip" placeholder="203207">
+                  </div>
+                  <div class="col-50">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="Country" placeholder="India">
+                  </div>
+                  <div class="col-50">
+                    <label for="Phone No.">Phone Number</label>
+                    <input type="tel" id="Phone No." name="Phone No." placeholder="+91-">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-50">
+                <h3><u>Payment</u></h3><br><br>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color:navy;"></i>
+                  <i class="fa fa-cc-amex" style="color:blue;"></i>
+                  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                  <i class="fa fa-cc-discover" style="color:orange;"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" placeholder="Unnati Mishra">
+                <label for="ccnum">Debit card number</label>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+    
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input type="text" id="expyear" name="expyear" placeholder="2030">
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+            </label>
+            <a href="buy.html">
+            <input type="submit" value="Continue to checkout" class="btn"></a>
+          </form>
+        </div>
+      </div>
+    
+      <div class="col-25">
+        <div class="container">
+          <h4>Cart
+            <span class="price" style="color:black">
+              <i class="fa fa-shopping-cart"></i>
+              <b>4</b>
+            </span>
+          </h4>
+          <p><a href="C:\Users\hp\Downloads\Ushop-main\Ushop-main\images\f1.jpg">Product 1</a> <span class="price">$78</span></p>
+          <p><a href="C:\Users\hp\Downloads\Ushop-main\Ushop-main\images\f2.jpg">Product 2</a> <span class="price">$54</span></p>
+          <p><a href="C:\Users\hp\Downloads\Ushop-main\Ushop-main\images\f3.jpg">Product 3</a> <span class="price">$98</span></p>
+          
+          <hr>
+          <p>Total <span class="price" style="color:black"><b>$335</b></span></p>
+        </div>
+      </div>
+    </div>
+        <!-- NEWSLETTER & FORM -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="your email address"required>
+            <button class="normal"><a href="login2.html" style="color: black;">Sign-Up</a></button>
+        </div>
+    </section>
+<!-- FOOTER -->
+<footer class="section-p1">
+    <div class="col">
+        <h3 style="color:rgb(9, 127, 148);"><u>U-shop</u></h3><br>
+        <h4><u>Contact</u></h4>
+        <p><strong>Address:</strong>Noida sector 62</p>
+        <p><strong>Phone:</strong>+91-9315500769</p>
+        <p><strong>Hours:</strong> 09:00 - 20:00, Mon - Sat</p>
+        <div class="follow">
+            <h4><u>Follow Us</u></h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-pinterest-p"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4><u>About</u></h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col">
+        <h4><u>My Account</u></h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+
+    <div class="col  install">
+        <h4><u>Install App</u></h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="images/app.jpg" alt="app-img">
+            <img src="images/play.jpg" alt="play-img">
+        </div>
+        <p>Secured Payment Gateways </p>
+        <img src="images/pay.png" alt="pay-img">
+    </div>
+
+    <div class="copyright">
+        <p><strong>U-shop</strong>- Ecommerse Multipage Website</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+    </body>
+</html>
