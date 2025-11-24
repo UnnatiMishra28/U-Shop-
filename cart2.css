@@ -1,0 +1,19 @@
+#lg-bag {
+    position: relative;
+}
+
+#lg-bag i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+#lg-bag a {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#lg-bag a:hover {
+    background-color: #f0f0f0;
+}

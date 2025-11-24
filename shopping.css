@@ -1,0 +1,12 @@
+.buy-now {
+    background-color: #4CAF50; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Add some padding */
+    border: none; /* Remove the default border */
+    border-radius: 5px; /* Add a rounded corner effect */
+    cursor: pointer; /* Change the cursor to a pointing hand */
+}
+
+.buy-now:hover {
+    background-color: #3e8e41; /* Darker green background color on hover */
+}
